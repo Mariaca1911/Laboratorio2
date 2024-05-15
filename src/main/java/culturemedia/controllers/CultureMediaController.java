@@ -1,22 +1,25 @@
 package culturemedia.controllers;
 
+import java.util.Collections;
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
 import culturemedia.exception.VideoNotFoundException;
 import culturemedia.model.Video;
 import culturemedia.repository.impl.VideoRepositoryImpl;
 import culturemedia.repository.impl.ViewRepositoryImpl;
 import culturemedia.service.CultureMediaServices;
 import culturemedia.service.impl.CultureMediaServiceImpl;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
-
-import java.util.Collections;
-import java.util.List;
-
+@RestController
 public class CultureMediaController {
+
     private final CultureMediaServices cultureMediaService;
 
 
